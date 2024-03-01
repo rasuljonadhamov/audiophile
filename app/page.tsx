@@ -1,3 +1,12 @@
+"use client";
+import { Provider } from "react-redux";
+import Hero from "./components/Hero";
+import { store } from "./store/store";
+
 export default function Home() {
-  return <main>hello there</main>;
+  return (
+    <Provider store={store}>
+      <Hero />
+    </Provider>
+  );
 }

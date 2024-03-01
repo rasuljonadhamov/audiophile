@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className=" bg-blackColor">
-      <div className="lg:container mx-auto px-4 py-6">
+      <div className="lg:container mx-auto px-4 py-6 border-b border-opacity-20">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 gap-2">
             <Link href="/" className=" flex gap-9">

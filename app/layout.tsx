@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>
-        <Header />
-        {children}
+      <body>
+          <Header />
+          {children}
       </body>
     </html>
   );
