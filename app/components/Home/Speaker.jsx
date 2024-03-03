@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
+import Link from "next/link";
 
 const Speaker = () => {
   return (
@@ -21,10 +22,12 @@ const Speaker = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </p>
-          <Button
-            className="bg-black text-white"
-            title={"SEE PRODUCT"}
-          ></Button>
+          <Link href={"/speakers"}>
+            <Button
+              className="bg-black text-white"
+              title={"SEE PRODUCT"}
+            ></Button>
+          </Link>
         </div>
       </div>
     </section>

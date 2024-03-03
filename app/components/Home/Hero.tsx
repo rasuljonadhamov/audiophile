@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../store/productSlice";
+import { addToCart } from "../../store/productSlice";
 
 const Hero = () => {
   const dispatch = useDispatch();
