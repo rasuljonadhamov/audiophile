@@ -28,12 +28,12 @@ const PageToShop = () => {
     },
   ];
   return (
-    <section className="bottom-section bg-whiteSecondary text-black py-16">
-      <div className="container mx-auto px-4 flex gap-4 text-center">
+    <section className="bottom-section -pt-10 bg-whiteSecondary text-black py-16">
+      <div className="container mx-auto px-4 pt-16 flex flex-wrap gap-4 text-center">
         {categoriesData.map((category) => (
           <div
             key={category.title}
-            className="w-full md:w-1/3 mb-8 flex flex-col items-center"
+            className="w-full md:w-[30%] mb-8 flex flex-col items-center"
           >
             <Image
               src={category.imageSrc}

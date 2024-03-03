@@ -10,11 +10,11 @@ const Hero = () => {
   return (
     <section className="hero-section bg-[#0E0E0E]">
       <div className="lg:container mx-auto px-4 py-16 flex flex-col-reverse lg:flex-row items-center justify-between">
-        <div className="sm:px-8  hero-content space-y-6 max-w-96 ">
+        <div className="sm:px-8  hero-content space-y-6 max-w-[24.75rem] ">
           <p className="text-white  opacity-65 text-sm tracking-[10px]">
             NEW PRODUCT
           </p>
-          <h1 className="text-6xl tracking-[2px] font-bold text-white">
+          <h1 className="text-6xl uppercase tracking-[2px] font-bold text-white">
             XX99 Mark II Headphones
           </h1>
           <p className="text-xl mb-10 text-white">
@@ -24,7 +24,7 @@ const Hero = () => {
           <Button
             onClick={() => dispatch(addToCart("dwjdj"))}
             title={"SEE PRODUCT"}
-            className="btn btn-primary mt-2 py-4 px-8 text-whiteSecondary bg-primary"
+            className=" text-whiteSecondary bg-primary"
           />
         </div>
         <div className="hero-image relative lg:ml-10">
