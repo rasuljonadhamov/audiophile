@@ -28,7 +28,7 @@ const Header = () => {
       <div className="lg:container mx-auto px-4 py-6 border-b border-opacity-20">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0 gap-2">
-            <Link href="/" className=" flex gap-9">
+            <Link href="/" className="cursor-pointer flex gap-9">
               <div className="lg:hidden ">
                 <button
                   onClick={toggleMenu}

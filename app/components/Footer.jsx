@@ -15,22 +15,31 @@ const Footer = () => {
           <div className="w-full md:w-1/2 mb-4">
             <ul className="list-none w-full uppercase flex items-center gap-8">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link href="/" className="text-gray-400 hover:text-white">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/headphones"
+                  className="text-gray-400 hover:text-white"
+                >
                   Headphones
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/speakers"
+                  className="text-gray-400 hover:text-white"
+                >
                   Speakers
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/earphones"
+                  className="text-gray-400 hover:text-white"
+                >
                   Earphones
                 </Link>
               </li>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const PageToShop = () => {
+  
   const categoriesData = [
     {
       imageSrc:
@@ -27,6 +28,7 @@ const PageToShop = () => {
       linkTo: "/earphones",
     },
   ];
+
   return (
     <section className="bottom-section -pt-10 bg-whiteSecondary text-black py-16">
       <div className="container mx-auto px-4 pt-16 flex flex-wrap gap-4 text-center">
