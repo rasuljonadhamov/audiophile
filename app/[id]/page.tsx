@@ -5,6 +5,8 @@ import products from "../../data.json";
 import BootomSection from "../components/Home/BootomSection";
 import PageToShop from "../components/Home/PageToShop";
 import Header from "../components/Header";
+import { Provider } from "react-redux";
+import store from "../store/store";
 
 interface ProductListingProps {
   category: string;
@@ -19,6 +21,7 @@ const ProductListing: React.FC<ProductListingProps> = ({ params }) => {
   );
 
   return (
+    // <Provider store={store}>
     <section className="bg-gray-100">
       <Header />
       <h1 className="bg-black py-24 text-center text-whiteSecondary uppercase text-4xl font-bold">
@@ -32,6 +35,7 @@ const ProductListing: React.FC<ProductListingProps> = ({ params }) => {
       <PageToShop />
       <BootomSection />
     </section>
+    // </Provider>
   );
 };
 

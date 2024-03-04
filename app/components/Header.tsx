@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 interface navigationType {
   href: string;
@@ -16,6 +17,8 @@ const Header = () => {
     { href: "/speakers", label: "SPEAKERS" },
     { href: "/earphones", label: "EARPHONES" },
   ];
+
+  const { addedProducts } = useSelector((state) => state.product);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -72,7 +75,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <div>
+          <div className="relative">
             <Link className="text-gray-700 hover:text-gray-900" href="/cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +92,9 @@ const Header = () => {
                 />
               </svg>
             </Link>
+            <div className="text-white absolute bg-primary rounded-full px-[3px] -right-2 -top-4">
+              {addedProducts.length}
+            </div>
           </div>
         </div>
       </div>

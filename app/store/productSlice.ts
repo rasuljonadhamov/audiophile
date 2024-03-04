@@ -9,10 +9,23 @@ const productSlice = createSlice({
 
   reducers: {
     addToCart: (state, { payload }) => {
-      state.addedProducts = payload;
+      const existingProduct = state.addedProducts.find(
+        (item) => item.id == payload.id
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity += payload.quantity;
+      } else {
+        state.addedProducts.push(payload);
+      }
+    },
+    removeFromCart: (state, { payload }) => {
+      state.addedProducts = state.addedProducts.filter(
+        (item) => item.id !== payload
+      );
     },
   },
 });
 
-export const { addToCart } = productSlice.actions;
+export const { addToCart, removeFromCart } = productSlice.actions;
 export default productSlice.reducer;

@@ -4,7 +4,7 @@ import Image from "next/image";
 const BootomSection = () => {
   return (
     <section className="pb-28 pt-16 bg-gray-100">
-      <div className="lg:container flex flex-wrap mx-auto items-center justify-between rounded-lg overflow-hidden ">
+      <div className="lg:container flex flex-wrap mx-auto items-center justify-between rounded-lg overflow-hidden px-4">
         <div className="max-w-[27.813rem] text-left">
           <h2 className="text-3xl text-black uppercase  tracking-[2px] font-bold mb-8">
             Bringing you the <br /> <span className="text-primary">best</span>{" "}
