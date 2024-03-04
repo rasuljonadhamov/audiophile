@@ -1,19 +1,11 @@
 import React from "react";
-import { Product } from "../types/Product";
 import ProductCard from "../components/ProductCard";
 import products from "../../data.json";
 import BootomSection from "../components/Home/BootomSection";
 import PageToShop from "../components/Home/PageToShop";
 import Header from "../components/Header";
-import { Provider } from "react-redux";
-import store from "../store/store";
 
-interface ProductListingProps {
-  category: string;
-  products: Product[];
-}
-
-const ProductListing: React.FC<ProductListingProps> = ({ params }) => {
+const ProductListing = ({ params }) => {
   const category = params.id;
 
   const filteredProducts = products.filter(
