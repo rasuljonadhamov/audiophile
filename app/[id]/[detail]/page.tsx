@@ -8,18 +8,11 @@ import Header from "@/app/components/Header";
 import { useRouter } from "next/navigation";
 import PageToShop from "@/app/components/Home/PageToShop";
 import Button from "@/app/components/Button";
-import { Provider, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/store/productSlice";
 import store from "@/app/store/store";
 
-interface ProductDetailsProps {
-  product: Product;
-}
-
-const ProductDetails: React.FC<ProductDetailsProps> = ({
-  params,
-  searchParams,
-}) => {
+const ProductDetails = ({ params, searchParams }) => {
   const id = params.detail;
 
   const product = products.filter((product) => product.id == id)[0];
