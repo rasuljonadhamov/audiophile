@@ -6,6 +6,7 @@ import { removeFromCart } from "@/app/store/productSlice";
 import Image from "next/image";
 import Header from "../components/Header";
 import Button from "../components/Button";
+import Link from "next/link";
 
 interface CartItem {
   id: string;
@@ -90,10 +91,12 @@ const Cart: React.FC = () => {
                 ${calculateSubtotal().toFixed(2)}
               </span>
             </div>
-            <Button
-              title={"Checkout"}
-              className="bg-primary hover:opacity-70 text-white font-bold py-2 px-4 ml-4"
-            />
+            <Link href={"/checkout"}>
+              <Button
+                title={"Checkout"}
+                className="bg-primary hover:opacity-70 text-white font-bold py-2 px-4 ml-4"
+              />
+            </Link>
           </div>
         )}
       </div>
