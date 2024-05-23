@@ -9,7 +9,13 @@ interface ProductListingProps {
   category: string;
 }
 
-const ProductCard: React.FC<ProductListingProps> = ({ product, category }) => {
+const ProductCard: React.FC<ProductListingProps> = ({
+  product,
+  category,
+}: {
+  product: any;
+  category: any;
+}) => {
   const { image, name, price, id } = product;
 
   return (
@@ -28,7 +34,13 @@ const ProductCard: React.FC<ProductListingProps> = ({ product, category }) => {
       <div className="p-4 text-center">
         <h3 className="text-lg font-medium mb-2">{name}</h3>
         <Link href={`/${category}/${id}`}>
-          <Button title={"See Product"} className={"bg-primary text-white"} />
+          <Button
+            title={"See Product"}
+            className={"bg-primary text-white"}
+            onClick={() => {
+              console.log("hi");
+            }}
+          />
         </Link>
       </div>
     </div>

@@ -18,7 +18,7 @@ const Header = () => {
     { href: "/earphones", label: "EARPHONES" },
   ];
 
-  const { addedProducts } = useSelector((state) => state.product);
+  const { addedProducts } = useSelector((state: any) => state.product);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

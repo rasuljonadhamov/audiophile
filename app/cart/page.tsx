@@ -7,19 +7,25 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Link from "next/link";
+import { log } from "console";
 
 interface CartItem {
   id: string;
   name: string;
-  image: string;
+  image: any;
   price: number;
   quantity: number;
+}
+interface RootState {
+  product: {
+    addedProducts: CartItem[];
+  };
 }
 
 const Cart: React.FC = () => {
   const addedProducts = useSelector(
-    (state) => state.product.addedProducts
-  ) as CartItem[];
+    (state: RootState) => state.product.addedProducts
+  );
   console.log(addedProducts);
 
   const dispatch = useDispatch();
@@ -93,6 +99,7 @@ const Cart: React.FC = () => {
             </div>
             <Link href={"/checkout"}>
               <Button
+                onClick={() => console.log("ji")}
                 title={"Checkout"}
                 className="bg-primary hover:opacity-70 text-white font-bold py-2 px-4 ml-4"
               />

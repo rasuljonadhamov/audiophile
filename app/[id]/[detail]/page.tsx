@@ -12,10 +12,24 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/store/productSlice";
 import store from "@/app/store/store";
 
-const ProductDetails = ({ params, searchParams }) => {
+interface PageParams {
+  id: number;
+  detail: string;
+}
+interface PageSearchParams {}
+
+interface ProductDetailsProps {
+  params: PageParams;
+  searchParams?: PageSearchParams;
+}
+
+const ProductDetails: React.FC<ProductDetailsProps> = ({
+  params,
+  searchParams,
+}) => {
   const id = params.detail;
 
-  const product = products.filter((product) => product.id == id)[0];
+  const product = products.filter((product) => product.id.toString() === id)[0];
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();

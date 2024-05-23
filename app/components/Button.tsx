@@ -1,6 +1,14 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-const Button = ({ title, className, onClick }) => {
+const Button = ({
+  title,
+  className,
+  onClick,
+}: {
+  title: string;
+  className: string;
+  onClick: MouseEventHandler;
+}) => {
   return (
     <button
       onClick={onClick}

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // Define the type for the order data
 interface CreateOrderPayload {
-  order: Order; // Replace with your Order interface path
+  order: any; // Replace with your Order interface path
 }
 
 const orderSlice = createSlice({
@@ -18,12 +18,12 @@ const orderSlice = createSlice({
       state.error = null;
       state.createdOrder = null;
     },
-    createOrderSuccess(state, action: { payload }) {
+    createOrderSuccess(state, action: { payload: any }) {
       state.loading = false;
       state.error = null;
       state.createdOrder = action.payload;
     },
-    createOrderFailure(state, action: { payload: Error }) {
+    createOrderFailure(state: any, action: { payload: Error }) {
       state.loading = false;
       state.error = action.payload;
       state.createdOrder = null;

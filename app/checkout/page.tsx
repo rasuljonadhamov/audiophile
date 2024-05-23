@@ -9,14 +9,14 @@ import Header from "../components/Header";
 interface CartItem {
   id: string;
   name: string;
-  image: string;
+  image: any;
   price: number;
   quantity: number;
 }
 
 const Checkout: React.FC = () => {
   const addedProducts = useSelector(
-    (state) => state.product.addedProducts
+    (state: any) => state.product.addedProducts
   ) as CartItem[];
   const dispatch = useDispatch();
 
@@ -177,7 +177,7 @@ const Checkout: React.FC = () => {
           <Button
             title={"Place Order"}
             className="bg-primary hover:bg-emerald-700 text-white font-bold py-2 px-4  ml-4"
-            onClick={handleOrderSubmit}
+            onClick={() => handleOrderSubmit}
           />
           {isModalVisible && (
             <div className="fixed inset-0 flex items-center justify-center">
